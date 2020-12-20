@@ -68,6 +68,9 @@ if __name__ == "__main__":
         if 'wikipedia' in query:
             speak('Searching Wikipedia...')
             query = query.replace("wikipedia", "")
+            query = query.replace("search", "")
+            query = query.replace("for", "")
+            query = query.replace("on", "")
             results = wikipedia.summary(query, sentences=2)
             speak("According to Wikipedia")
             print(results)
@@ -105,6 +108,8 @@ if __name__ == "__main__":
 
         elif 'email to ' in query:
             query = query.replace("email to ", "")
+            query = query.replace("send ", "")
+            query = query.replace(" a ", "")
 
             contacts={"alok":"alokpvc@gmail.com"}
             for i in contacts.keys():
@@ -117,9 +122,13 @@ if __name__ == "__main__":
                         speak("Email has been sent!")
                     except Exception as e:
                         print(e)
-                        speak("Sorry my friend Ariyo. I am not able to send this email")    
+                        speak("Sorry Sir. I am not able to send this email. I think you Have To Allow less Secure Apps in gmail.")  
+                else:
+                    speak("No recipients with this name")  
         elif 'news' in query:
             os.system('python news.py')
+        elif 'exit' in query:
+            break
          
 
 
