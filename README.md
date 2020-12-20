@@ -12,3 +12,13 @@ Allow less secure app in gmail. You Can go to this link: https://myaccount.googl
 ## You can Add Recipeints in the contact dictionary on line 114
 Like {"name":"his email", "another person":"his email"}
 You can add many People as you want.
+## In order to Run:
+You have to install Python
+And other modules:
+**Run these Commands to install them**
+pip install pyttsx3
+pip install speechRecognition
+pip install wikipedia
+pip install pyAudio 
+pip install win32
+
